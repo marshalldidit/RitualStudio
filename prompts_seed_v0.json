@@ -1,0 +1,982 @@
+[
+  {
+    "id": 1,
+    "title": "Draw a self-portrait using only line \u2014 no shading.",
+    "description": "Draw a self-portrait using only line \u2014 no shading.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Sketch a character based on one emotion: joy.",
+    "description": "Sketch a character based on one emotion: joy.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Draw a person using exaggerated proportions.",
+    "description": "Draw a person using exaggerated proportions.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Create a character silhouette that communicates personality.",
+    "description": "Create a character silhouette that communicates personality.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Draw a portrait using only three values (light, mid, dark).",
+    "description": "Draw a portrait using only three values (light, mid, dark).",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Design a street musician with strong silhouette clarity.",
+    "description": "Design a street musician with strong silhouette clarity.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Draw a character lit from below.",
+    "description": "Draw a character lit from below.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Create a portrait with dramatic side lighting.",
+    "description": "Create a portrait with dramatic side lighting.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Design a character whose outfit tells their story.",
+    "description": "Design a character whose outfit tells their story.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Draw two characters interacting without dialogue.",
+    "description": "Draw two characters interacting without dialogue.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Draw a character in forced perspective.",
+    "description": "Draw a character in forced perspective.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Paint a portrait where color defines mood.",
+    "description": "Paint a portrait where color defines mood.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Design a character using negative space intentionally.",
+    "description": "Design a character using negative space intentionally.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Draw a figure in motion mid-gesture.",
+    "description": "Draw a figure in motion mid-gesture.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Create a character composition framed through foreground objects.",
+    "description": "Create a character composition framed through foreground objects.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "characters_portraits"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Draw a quiet room in your home.",
+    "description": "Draw a quiet room in your home.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Sketch a simple landscape using only 10 lines.",
+    "description": "Sketch a simple landscape using only 10 lines.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Draw a window scene from memory.",
+    "description": "Draw a window scene from memory.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Sketch a city block using basic shapes.",
+    "description": "Sketch a city block using basic shapes.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Draw a landscape using only silhouette.",
+    "description": "Draw a landscape using only silhouette.",
+    "difficulty_level": "beginner",
+    "time_required_minutes": 30,
+    "growth_weight": 0.3,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Design a cozy caf\u00e9 interior.",
+    "description": "Design a cozy caf\u00e9 interior.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Draw a forest path with layered depth.",
+    "description": "Draw a forest path with layered depth.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Create a scene using strong foreground/midground/background.",
+    "description": "Create a scene using strong foreground/midground/background.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Sketch an abandoned building.",
+    "description": "Sketch an abandoned building.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Draw a rainy street scene.",
+    "description": "Draw a rainy street scene.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Create a cinematic wide-angle environment.",
+    "description": "Create a cinematic wide-angle environment.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Draw an environment using atmospheric perspective.",
+    "description": "Draw an environment using atmospheric perspective.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Design a sci-fi cityscape.",
+    "description": "Design a sci-fi cityscape.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Illustrate a storm approaching.",
+    "description": "Illustrate a storm approaching.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Draw an interior lit by a single light source.",
+    "description": "Draw an interior lit by a single light source.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "environments_landscapes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Invent a small forest creature.",
+    "description": "Invent a small forest creature.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Design a hybrid animal.",
+    "description": "Design a hybrid animal.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Draw a creature using geometric base forms.",
+    "description": "Draw a creature using geometric base forms.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Create a mythic guardian statue.",
+    "description": "Create a mythic guardian statue.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Design a dragon using only silhouette.",
+    "description": "Design a dragon using only silhouette.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Draw a creature adapted to deep ocean life.",
+    "description": "Draw a creature adapted to deep ocean life.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Sketch a fantasy mount.",
+    "description": "Sketch a fantasy mount.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Create a creature that reflects its environment.",
+    "description": "Create a creature that reflects its environment.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Design a gentle monster.",
+    "description": "Design a gentle monster.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Illustrate a mythical creature mid-flight.",
+    "description": "Illustrate a mythical creature mid-flight.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "creatures_fantasy"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 41,
+    "title": "Draw your favorite mug from observation.",
+    "description": "Draw your favorite mug from observation.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 42,
+    "title": "Sketch a pair of worn shoes.",
+    "description": "Sketch a pair of worn shoes.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 43,
+    "title": "Draw a still life with 3 objects.",
+    "description": "Draw a still life with 3 objects.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Illustrate a messy desk scene.",
+    "description": "Illustrate a messy desk scene.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 45,
+    "title": "Draw an object using dramatic shadow.",
+    "description": "Draw an object using dramatic shadow.",
+    "difficulty_level": "intermediate",
+    "time_required_minutes": 30,
+    "growth_weight": 0.6,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 46,
+    "title": "Sketch something transparent.",
+    "description": "Sketch something transparent.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 47,
+    "title": "Draw a reflective object.",
+    "description": "Draw a reflective object.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 48,
+    "title": "Create a minimal object study.",
+    "description": "Create a minimal object study.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 49,
+    "title": "Draw an object from an unusual angle.",
+    "description": "Draw an object from an unusual angle.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 50,
+    "title": "Illustrate a broken object.",
+    "description": "Illustrate a broken object.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "everyday_objects"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 51,
+    "title": "Draw a moment before something changes.",
+    "description": "Draw a moment before something changes.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 52,
+    "title": "Illustrate a reunion scene.",
+    "description": "Illustrate a reunion scene.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 53,
+    "title": "Depict a character waiting.",
+    "description": "Depict a character waiting.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 54,
+    "title": "Show tension without faces.",
+    "description": "Show tension without faces.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 55,
+    "title": "Draw a quiet victory moment.",
+    "description": "Draw a quiet victory moment.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 56,
+    "title": "Illustrate a scene in total silence.",
+    "description": "Illustrate a scene in total silence.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 57,
+    "title": "Show contrast between chaos and calm.",
+    "description": "Show contrast between chaos and calm.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 58,
+    "title": "Draw a farewell.",
+    "description": "Draw a farewell.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 59,
+    "title": "Illustrate anticipation.",
+    "description": "Illustrate anticipation.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 60,
+    "title": "Create a scene using only body language.",
+    "description": "Create a scene using only body language.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 61,
+    "title": "Draw using only gesture lines.",
+    "description": "Draw using only gesture lines.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 62,
+    "title": "Limit yourself to 3 colors.",
+    "description": "Limit yourself to 3 colors.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 63,
+    "title": "Create a composition using rule of thirds.",
+    "description": "Create a composition using rule of thirds.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 64,
+    "title": "Draw using high contrast lighting.",
+    "description": "Draw using high contrast lighting.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 65,
+    "title": "Create a piece focused entirely on texture.",
+    "description": "Create a piece focused entirely on texture.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 66,
+    "title": "Use overlapping forms to create depth.",
+    "description": "Use overlapping forms to create depth.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 67,
+    "title": "Compose using only negative space.",
+    "description": "Compose using only negative space.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  },
+  {
+    "id": 68,
+    "title": "Focus on dynamic perspective.",
+    "description": "Focus on dynamic perspective.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "lighting_shadow"
+    ]
+  },
+  {
+    "id": 69,
+    "title": "Draw using exaggerated light direction.",
+    "description": "Draw using exaggerated light direction.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "gesture_movement"
+    ]
+  },
+  {
+    "id": 70,
+    "title": "Create rhythm using repeated shapes.",
+    "description": "Create rhythm using repeated shapes.",
+    "difficulty_level": "advanced",
+    "time_required_minutes": 30,
+    "growth_weight": 0.8,
+    "subject_tags": [
+      "story_scenes"
+    ],
+    "skill_focus_tags": [
+      "composition"
+    ]
+  }
+]
