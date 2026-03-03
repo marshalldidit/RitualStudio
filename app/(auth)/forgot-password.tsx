@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import {
   View,
-  TextInput,
   KeyboardAvoidingView,
   ScrollView,
   Platform,
@@ -17,61 +16,81 @@ import { colors, spacing, radius } from "@/theme";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export default function SignInScreen() {
+export default function ForgotPasswordScreen() {
   const router = useRouter();
-  const { signIn } = useAuth();
-  const passwordRef = useRef<TextInput>(null);
+  const { resetPassword } = useAuth();
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
-  const [passwordError, setPasswordError] = useState("");
   const [generalError, setGeneralError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   function validate(): boolean {
-    let valid = true;
     setEmailError("");
-    setPasswordError("");
     setGeneralError("");
 
     const trimmed = email.trim();
     if (!trimmed) {
       setEmailError("Email is required.");
-      valid = false;
-    } else if (!EMAIL_RE.test(trimmed)) {
+      return false;
+    }
+    if (!EMAIL_RE.test(trimmed)) {
       setEmailError("Please enter a valid email address.");
-      valid = false;
+      return false;
     }
 
-    if (!password) {
-      setPasswordError("Password is required.");
-      valid = false;
-    } else if (password.length < 6) {
-      setPasswordError("Password must be at least 6 characters.");
-      valid = false;
-    }
-
-    return valid;
+    return true;
   }
 
-  async function handleSignIn() {
+  async function handleResetPassword() {
     if (!validate()) return;
     setIsSubmitting(true);
     setGeneralError("");
 
     try {
-      const { error } = await signIn(email.trim(), password);
+      const { error } = await resetPassword(email.trim());
       if (error) {
         setGeneralError(error);
+      } else {
+        setShowConfirmation(true);
       }
-      // On success, onAuthStateChange fires → useProtectedRoute navigates
     } catch {
-      console.error("[SignIn] Unexpected error");
+      console.error("[ForgotPassword] Unexpected error");
       setGeneralError("An unexpected error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
+  }
+
+  if (showConfirmation) {
+    return (
+      <Screen>
+        <View style={styles.confirmationContainer}>
+          <RSText variant="h2" style={styles.centered}>
+            Check Your Email
+          </RSText>
+          <RSText
+            variant="bodyLarge"
+            color={colors.dark[500]}
+            style={styles.centered}
+          >
+            We sent a password reset link to{" "}
+            <RSText variant="bodyLarge" color={colors.dark[900]}>
+              {email.trim()}
+            </RSText>
+            . Follow the link to set a new password.
+          </RSText>
+          <Button
+            label="Back to Sign In"
+            variant="primary"
+            size="lg"
+            style={styles.button}
+            onPress={() => router.replace("/(auth)/sign-in")}
+          />
+        </View>
+      </Screen>
+    );
   }
 
   return (
@@ -86,13 +105,13 @@ export default function SignInScreen() {
           bounces={false}
         >
           <View style={styles.header}>
-            <RSText variant="display">Ritual{"\n"}Studio</RSText>
+            <RSText variant="h1">Reset Password</RSText>
             <RSText
               variant="bodyLarge"
               color={colors.dark[500]}
               style={styles.subtitle}
             >
-              Your daily drawing discipline starts here.
+              Enter your email and we'll send you a link to reset your password.
             </RSText>
           </View>
 
@@ -117,51 +136,26 @@ export default function SignInScreen() {
               keyboardType="email-address"
               autoCapitalize="none"
               autoComplete="email"
-              returnKeyType="next"
-              onSubmitEditing={() => passwordRef.current?.focus()}
-            />
-
-            <Input
-              label="Password"
-              placeholder="Enter your password"
-              value={password}
-              onChangeText={(t) => {
-                setPassword(t);
-                if (passwordError) setPasswordError("");
-              }}
-              error={passwordError}
-              secureTextEntry
-              autoCapitalize="none"
-              autoComplete="password"
               returnKeyType="go"
-              onSubmitEditing={handleSignIn}
-              inputRef={passwordRef}
+              onSubmitEditing={handleResetPassword}
             />
 
             <Button
-              label="Forgot Password?"
-              variant="ghost"
-              size="sm"
-              style={styles.forgotButton}
-              onPress={() => router.push("/(auth)/forgot-password")}
-            />
-
-            <Button
-              label={isSubmitting ? "Signing In\u2026" : "Sign In"}
+              label={isSubmitting ? "Sending\u2026" : "Send Reset Link"}
               variant="primary"
               size="lg"
               style={styles.button}
               disabled={isSubmitting}
-              onPress={handleSignIn}
+              onPress={handleResetPassword}
             />
           </View>
 
           <View style={styles.footer}>
             <Button
-              label="Create Account"
+              label="Back to Sign In"
               variant="ghost"
               size="md"
-              onPress={() => router.push("/(auth)/sign-up")}
+              onPress={() => router.back()}
             />
           </View>
         </ScrollView>
@@ -197,9 +191,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.base,
     paddingVertical: spacing.md,
   },
-  forgotButton: {
-    alignSelf: "flex-end",
-  },
   button: {
     width: "100%",
     marginTop: spacing.sm,
@@ -207,5 +198,14 @@ const styles = StyleSheet.create({
   footer: {
     alignItems: "center",
     marginTop: spacing["2xl"],
+  },
+  confirmationContainer: {
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: spacing.xl,
+    gap: spacing.lg,
+  },
+  centered: {
+    textAlign: "center",
   },
 });

@@ -1,7 +1,7 @@
 import "../global.css";
 import { useEffect } from "react";
 import { Slot } from "expo-router";
-import { View, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator, StyleSheet } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "@expo-google-fonts/plus-jakarta-sans";
 import {
@@ -11,15 +11,35 @@ import {
   PlusJakartaSans_700Bold,
   PlusJakartaSans_800ExtraBold,
 } from "@expo-google-fonts/plus-jakarta-sans";
-import { AuthProvider } from "@/providers/AuthProvider";
+import { AuthProvider, useAuth } from "@/providers/AuthProvider";
 import { useProtectedRoute } from "@/hooks/useProtectedRoute";
+import { colors } from "@/theme";
 
 SplashScreen.preventAutoHideAsync();
 
 function RootNavigator() {
+  const { isLoading } = useAuth();
   useProtectedRoute();
+
+  if (isLoading) {
+    return (
+      <View style={loadingStyles.container}>
+        <ActivityIndicator size="large" color={colors.brand[400]} />
+      </View>
+    );
+  }
+
   return <Slot />;
 }
+
+const loadingStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: colors.background,
+  },
+});
 
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({

@@ -40,13 +40,16 @@ Track progress across sessions by checking off completed items.
 - [x] Verify route guard logic works (auth → onboarding → tabs)
 
 ## Phase 4: Authentication Flow
-- [ ] Implement src/providers/AuthProvider.tsx
-- [ ] Implement src/hooks/useAuth.ts
-- [ ] Build src/components/ui/Input.tsx (from DSInput pattern)
-- [ ] Build src/components/ui/Button.tsx (from DSButton pattern)
-- [ ] Implement app/(auth)/sign-in.tsx
-- [ ] Implement app/(auth)/sign-up.tsx
+- [x] Harden src/providers/AuthProvider.tsx (error handling, signIn/signUp/signOut/refreshProfile)
+- [x] Build src/components/ui/Input.tsx (from DSInput pattern)
+- [x] Build src/components/ui/Button.tsx (from DSButton pattern) — already done in Phase 1
+- [x] Add loading guard in app/_layout.tsx RootNavigator (prevent blank screen flash)
+- [x] Implement app/(auth)/sign-in.tsx (email/password, validation, error banners)
+- [x] Implement app/(auth)/sign-up.tsx (email/password/confirm, email confirmation flow)
+- [x] Create supabase/migrations/006_security_hardening.sql (streak cheating fix)
+- [ ] Run migration 006 against Supabase project
 - [ ] Verify: sign up creates user + streak rows, sign in persists across restart
+- [ ] Verify: cross-user data isolation (RLS blocks queries to other users' data)
 
 ## Phase 5: Onboarding Flow
 - [ ] Create src/stores/onboardingStore.ts (Zustand)
