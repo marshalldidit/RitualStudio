@@ -26,18 +26,18 @@ Track progress across sessions by checking off completed items.
 - [ ] Run migrations against Supabase project and verify
 
 ## Phase 3: Navigation Architecture
-- [ ] Create app/_layout.tsx root with AuthProvider + route guard
-- [ ] Create app/(auth)/_layout.tsx
-- [ ] Create app/(auth)/sign-in.tsx (placeholder)
-- [ ] Create app/(auth)/sign-up.tsx (placeholder)
-- [ ] Create app/(onboarding)/_layout.tsx with step progress
-- [ ] Create onboarding step placeholders (goal, level, subjects, skills, duration, reminder, complete)
-- [ ] Create app/(tabs)/_layout.tsx with 3-tab bar (Home, Calendar, Profile)
-- [ ] Create tab screen placeholders (index, calendar, profile)
-- [ ] Create session/[promptId].tsx placeholder
-- [ ] Create upload/[promptId].tsx placeholder
-- [ ] Create completion.tsx placeholder
-- [ ] Verify route guard logic works (auth → onboarding → tabs)
+- [x] Create app/_layout.tsx root with AuthProvider + route guard
+- [x] Create app/(auth)/_layout.tsx
+- [x] Create app/(auth)/sign-in.tsx (placeholder)
+- [x] Create app/(auth)/sign-up.tsx (placeholder)
+- [x] Create app/(onboarding)/_layout.tsx with step progress
+- [x] Create onboarding step placeholders (goal, level, subjects, skills, duration, reminder, complete)
+- [x] Create app/(tabs)/_layout.tsx with 3-tab bar (Home, Calendar, Profile)
+- [x] Create tab screen placeholders (index, calendar, profile)
+- [x] Create session/[promptId].tsx placeholder
+- [x] Create upload/[promptId].tsx placeholder
+- [x] Create completion.tsx placeholder
+- [x] Verify route guard logic works (auth → onboarding → tabs)
 
 ## Phase 4: Authentication Flow
 - [ ] Implement src/providers/AuthProvider.tsx

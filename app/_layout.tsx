@@ -11,8 +11,15 @@ import {
   PlusJakartaSans_700Bold,
   PlusJakartaSans_800ExtraBold,
 } from "@expo-google-fonts/plus-jakarta-sans";
+import { AuthProvider } from "@/providers/AuthProvider";
+import { useProtectedRoute } from "@/hooks/useProtectedRoute";
 
 SplashScreen.preventAutoHideAsync();
+
+function RootNavigator() {
+  useProtectedRoute();
+  return <Slot />;
+}
 
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
@@ -37,5 +44,9 @@ export default function RootLayout() {
     );
   }
 
-  return <Slot />;
+  return (
+    <AuthProvider>
+      <RootNavigator />
+    </AuthProvider>
+  );
 }
