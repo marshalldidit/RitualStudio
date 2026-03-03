@@ -39,17 +39,22 @@ src/
     Button.tsx                # 5 variants (primary/cta/outline/ghost/danger), 3 sizes, pill shape
     Card.tsx                  # default (white + lifted) / active (brand highlight + glow)
     Screen.tsx                # SafeAreaView wrapper with background color
+    Input.tsx                 # Text input with focus/error/disabled states, password toggle
+    StepProgressBar.tsx       # Animated onboarding step indicator dots
+    TabBar.tsx                # Bottom tab bar with active pill highlight
   components/                 # Feature components (organized by feature: home/, session/, etc.)
-  providers/                  # React context providers (AuthProvider, etc.)
-  hooks/                      # Custom hooks
+  providers/
+    AuthProvider.tsx           # Auth context: session, userProfile, signIn/signUp/signOut/resetPassword/refreshProfile
+  hooks/
+    useProtectedRoute.ts      # Route guard: no session→auth, !onboarding→onboarding, else→tabs
   stores/                     # Zustand stores
   lib/                        # Utilities (supabase client, image upload, streak manager)
   types/                      # TypeScript type definitions
   constants/                  # Static data and option definitions
 
-supabase/                     # Not yet created
-  migrations/                 # SQL migration files
-  functions/                  # Edge Functions (prompt generation)
+supabase/
+  migrations/                 # 6 SQL migration files (001–006)
+  functions/                  # Edge Functions (prompt generation) — not yet created
 ```
 
 ## Design System
@@ -220,6 +225,10 @@ Note: `--legacy-peer-deps` is needed due to minor peer dependency version mismat
 
 **Phase 1: Complete** — Project scaffolded, dependencies installed, NativeWind configured, design tokens translated, Metro bundler verified.
 
-**Design system translation: Complete** — Theme token files and 4 core UI primitives (RSText, Button, Card, Screen) built with `StyleSheet.create`.
+**Phase 2: Complete** — Supabase setup: 5 migrations (tables, RLS, storage, seed data, user trigger), typed client singleton with SecureStore adapter, 105 prompts seeded.
 
-**Next: Phase 2** — Supabase setup (SQL migrations, RLS policies, storage bucket, prompt seed data, TypeScript types, client singleton).
+**Phase 3: Complete** — Navigation architecture: route guards (`useProtectedRoute`), auth/onboarding/tabs route groups, tab bar, placeholder screens.
+
+**Phase 4: Complete** — Authentication flow: AuthProvider with signIn/signUp/signOut/resetPassword/refreshProfile + error mapping, Input.tsx component, sign-in/sign-up/forgot-password screens with client validation and error banners, loading guard in root layout, migration 006 (streak security hardening — removed direct user_streaks UPDATE, added server-side `update_streak_on_completion` function).
+
+**Next: Phase 5** — Onboarding flow (Zustand store, selection chips, 6-step screens, completion screen writing to DB).
