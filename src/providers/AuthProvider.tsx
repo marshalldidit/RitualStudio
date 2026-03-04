@@ -66,7 +66,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     setProfileError(null);
-    setUserProfile(data);
+    setUserProfile(data as UserRow);
   }, []);
 
   useEffect(() => {

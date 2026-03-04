@@ -52,19 +52,20 @@ Track progress across sessions by checking off completed items.
 - [ ] Verify: cross-user data isolation (RLS blocks queries to other users' data)
 
 ## Phase 5: Onboarding Flow
-- [ ] Create src/stores/onboardingStore.ts (Zustand)
-- [ ] Create src/constants/onboarding.ts (option definitions)
-- [ ] Build src/components/ui/SelectionChip.tsx (from CategoryChip)
-- [ ] Build src/components/ui/SingleSelectCard.tsx
-- [ ] Build src/components/ui/StepProgressBar.tsx (from OnboardingSteps)
-- [ ] Implement goal.tsx — "What brings you to Ritual Studio?"
-- [ ] Implement level.tsx — "How would you describe your current level?"
-- [ ] Implement subjects.tsx — "What do you want to draw more of?" (multi-select)
-- [ ] Implement skills.tsx — "What would you like to strengthen?" (multi-select)
-- [ ] Implement duration.tsx — "How much time can you dedicate each day?"
-- [ ] Implement reminder.tsx — "When should your studio open each day?"
-- [ ] Implement complete.tsx — "Your Ritual Begins Today" summary + "Begin Day 1"
-- [ ] Verify: complete onboarding → users row updated, redirected to home
+- [x] Create src/stores/onboardingStore.ts (Zustand)
+- [x] Create src/constants/onboarding.ts (option definitions)
+- [x] Build src/components/ui/SelectionChip.tsx (from CategoryChip)
+- [x] Build src/components/ui/StepProgressBar.tsx (from OnboardingSteps) — done in Phase 3
+- [x] Install @react-native-community/datetimepicker
+- [x] Implement goal.tsx — "What brings you to Ritual Studio?"
+- [x] Implement level.tsx — "How would you describe your current level?"
+- [x] Implement subjects.tsx — "What do you want to draw more of?" (multi-select)
+- [x] Implement skills.tsx — "What would you like to strengthen?" (multi-select)
+- [x] Implement duration.tsx — "How much time can you dedicate each day?"
+- [x] Implement reminder.tsx — "When should your studio open each day?"
+- [x] Implement complete.tsx — "Your Ritual Begins Today" summary + DB write
+- [x] Fix database.ts types (add Relationships for supabase-js v2.98 compat)
+- [x] Verify: complete onboarding → users row updated, redirected to home
 
 ## Phase 6: Daily Prompt Generation
 - [ ] Create src/types/prompts.ts

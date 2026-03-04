@@ -231,4 +231,6 @@ Note: `--legacy-peer-deps` is needed due to minor peer dependency version mismat
 
 **Phase 4: Complete** — Authentication flow: AuthProvider with signIn/signUp/signOut/resetPassword/refreshProfile + error mapping, Input.tsx component, sign-in/sign-up/forgot-password screens with client validation and error banners, loading guard in root layout, migration 006 (streak security hardening — removed direct user_streaks UPDATE, added server-side `update_streak_on_completion` function).
 
-**Next: Phase 5** — Onboarding flow (Zustand store, selection chips, 6-step screens, completion screen writing to DB).
+**Phase 5: Complete** — Onboarding flow: Zustand store (`onboardingStore`), constants (`onboarding.ts`), SelectionChip component, 6-step screens (goal multi-select, level, subjects, skills, duration, reminder with platform-aware time picker), completion screen with summary + edit links + Supabase write + haptic feedback. Fixed `database.ts` types for supabase-js v2.98 (`Relationships` key). Installed `@react-native-community/datetimepicker`.
+
+**Next: Phase 6** — Daily prompt generation (Edge Function with personalization algorithm).

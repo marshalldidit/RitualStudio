@@ -40,6 +40,7 @@ export type Database = {
           skill_focus_preferences?: string[]
           onboarding_completed?: boolean
         }
+        Relationships: []
       }
       prompts: {
         Row: {
@@ -78,6 +79,7 @@ export type Database = {
           is_active?: boolean
           created_at?: string
         }
+        Relationships: []
       }
       daily_prompt_sets: {
         Row: {
@@ -107,6 +109,7 @@ export type Database = {
           status?: 'offered' | 'selected' | 'completed' | 'expired'
           created_at?: string
         }
+        Relationships: []
       }
       user_prompt_history: {
         Row: {
@@ -139,6 +142,7 @@ export type Database = {
           was_completed?: boolean
           completed_at?: string | null
         }
+        Relationships: []
       }
       user_streaks: {
         Row: {
@@ -165,6 +169,7 @@ export type Database = {
           grace_days_available?: number
           updated_at?: string
         }
+        Relationships: []
       }
       uploads: {
         Row: {
@@ -194,6 +199,7 @@ export type Database = {
           caption?: string | null
           created_at?: string
         }
+        Relationships: []
       }
     }
     Views: Record<string, never>
