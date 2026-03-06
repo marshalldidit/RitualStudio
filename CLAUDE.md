@@ -235,4 +235,6 @@ Note: `--legacy-peer-deps` is needed due to minor peer dependency version mismat
 
 **Phase 6: Complete** — Daily prompt generation + Home screen: Postgres RPC function `generate_daily_prompts` (migration 007) with full personalization algorithm (eligibility filtering, goal-weighted scoring, comfort/growth/wildcard role selection, cooldown logic, fallback cascade). Added `DailyPromptsResponse`/`DailyPromptWithRole` types, `dailyPromptsStore` (Zustand), `useDailyPrompts` hook. Built `StreakBadge`, `PromptCard` (with role badges), `PromptCarousel` (FlatList snap + animated dot indicators). Home screen with loading/error/empty states, streak display, and "Begin Drawing" CTA that selects prompt and navigates to session.
 
-**Next: Phase 8** — Active session (calm timer screen).
+**Phase 8: Complete** — Active session (calm timer screen): Timestamp-based session engine (`sessionStore`) with explicit state machine (idle/running/paused/completed_active/ended). Only 15/30/60 min durations accepted. Soft completion model with 80% early-complete threshold (12/24/48 min). Wall-clock timer via `useSessionTimer` hook (background-aware, no auto-pause). Reusable `ProgressRing` (SVG + reanimated). Minutes-only display with step-based ring progress. Pause/resume, overtime display (+M:SS), one-time completion haptic, back-button confirmation dialog with threshold-based complete/incomplete logic.
+
+**Next: Phase 9** — Image upload.

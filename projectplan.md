@@ -82,13 +82,17 @@ Track progress across sessions by checking off completed items.
 - [ ] Verify: prompts display, swipe works, Begin navigates to session
 
 ## Phase 8: Active Session (Calm Timer)
-- [ ] Build src/components/session/TimerRing.tsx (smooth circular countdown)
-- [ ] Build src/components/session/PromptDisplay.tsx
-- [ ] Build src/components/session/SessionControls.tsx
-- [ ] Implement src/hooks/useTimer.ts (background-aware, minutes-only display)
-- [ ] Build src/components/ui/ProgressRing.tsx
-- [ ] Implement app/session/[promptId].tsx — dark bg, calm timer, "I'm Done"
-- [ ] Verify: timer runs smoothly, handles background, "I'm Done" → upload
+- [x] Create src/stores/sessionStore.ts (timestamp-based session engine with state machine)
+- [x] Create src/hooks/useSessionTimer.ts (wall-clock timer, background-aware, auto-completion)
+- [x] Build src/components/ui/ProgressRing.tsx (reusable SVG ring with reanimated)
+- [x] Build src/components/session/TimerRing.tsx (minutes-only display, step-based ring)
+- [x] Build src/components/session/PromptDisplay.tsx (role badge + title)
+- [x] Build src/components/session/SessionControls.tsx (pause/resume + done CTA)
+- [x] Implement app/session/[promptId].tsx — dark bg, calm timer, pause, "I'm Done", back confirmation
+- [x] State machine: idle → running → paused → completed_active → ended
+- [x] Soft completion: 80% threshold (12/24/48 min), overtime display (+M:SS)
+- [x] Duration guard: only 15/30/60 min accepted
+- [ ] Verify: timer runs smoothly, handles background, pause/resume, completion, "I'm Done" → upload
 
 ## Phase 9: Image Upload
 - [ ] Build src/components/upload/ImagePreview.tsx
