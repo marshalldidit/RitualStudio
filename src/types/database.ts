@@ -203,7 +203,16 @@ export type Database = {
       }
     }
     Views: Record<string, never>
-    Functions: Record<string, never>
+    Functions: {
+      generate_daily_prompts: {
+        Args: { p_user_id: string; p_date_local: string }
+        Returns: Json
+      }
+      update_streak_on_completion: {
+        Args: { p_user_id: string; p_date: string }
+        Returns: undefined
+      }
+    }
     Enums: Record<string, never>
   }
 }
@@ -219,3 +228,27 @@ export type UploadRow = Database['public']['Tables']['uploads']['Row']
 // Domain types
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced'
 export type DailyPromptSetStatus = 'offered' | 'selected' | 'completed' | 'expired'
+export type PromptRole = 'comfort' | 'growth' | 'wildcard'
+
+// Response type from generate_daily_prompts RPC
+export interface DailyPromptWithRole {
+  id: number
+  title: string
+  description: string
+  difficulty_level: string
+  time_required_minutes: number
+  growth_weight: number
+  subject_tags: string[]
+  skill_focus_tags: string[]
+  role: PromptRole
+}
+
+export interface DailyPromptsResponse {
+  id: string
+  user_id: string
+  date_local: string
+  prompt_ids: number[]
+  selected_prompt_id: number | null
+  status: DailyPromptSetStatus
+  prompts: DailyPromptWithRole[]
+}

@@ -67,23 +67,18 @@ Track progress across sessions by checking off completed items.
 - [x] Fix database.ts types (add Relationships for supabase-js v2.98 compat)
 - [x] Verify: complete onboarding → users row updated, redirected to home
 
-## Phase 6: Daily Prompt Generation
-- [ ] Create src/types/prompts.ts
-- [ ] Implement supabase/functions/generate-daily-prompts/index.ts (Edge Function)
-- [ ] Implement prompt eligibility filtering (difficulty, time, subject overlap, recency)
-- [ ] Implement scoring (comfort, growth, wildcard roles with goal weights)
-- [ ] Implement unused prompt cooldown logic
-- [ ] Create src/hooks/useDailyPrompts.ts (client hook)
-- [ ] Verify: Edge Function generates 3 prompts, caches in daily_prompt_sets
-
-## Phase 7: Home Screen
-- [ ] Build src/components/home/GreetingHeader.tsx
-- [ ] Build src/components/home/PromptCard.tsx
-- [ ] Build src/components/home/PromptCarousel.tsx (horizontal swipe)
-- [ ] Build src/components/home/PromptRoleBadge.tsx
-- [ ] Build src/components/home/StreakBadgeInline.tsx
-- [ ] Build src/components/ui/Badge.tsx, SkeletonLoader.tsx, EmptyState.tsx, StreakBadge.tsx
-- [ ] Implement app/(tabs)/index.tsx — Day X, streak, cards, Begin button
+## Phase 6: Daily Prompt Generation + Home Screen
+- [x] Create migration 007: `generate_daily_prompts` Postgres RPC function (personalization algorithm)
+- [x] Implement prompt eligibility filtering (difficulty, time, subject overlap, recency)
+- [x] Implement scoring (comfort, growth, wildcard roles with goal weights)
+- [x] Implement unused prompt cooldown logic + fallback cascade
+- [x] Add RPC function + response types to `src/types/database.ts`
+- [x] Create `src/stores/dailyPromptsStore.ts` (Zustand store)
+- [x] Create `src/hooks/useDailyPrompts.ts` (client hook calling RPC)
+- [x] Build `src/components/home/StreakBadge.tsx`
+- [x] Build `src/components/home/PromptCard.tsx` with role badges
+- [x] Build `src/components/home/PromptCarousel.tsx` (horizontal swipe + dot indicators)
+- [x] Implement `app/(tabs)/index.tsx` — Day X, streak, prompt cards, loading/error/empty states, Begin button
 - [ ] Verify: prompts display, swipe works, Begin navigates to session
 
 ## Phase 8: Active Session (Calm Timer)

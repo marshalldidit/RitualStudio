@@ -155,7 +155,7 @@ Route guard logic in root layout:
 
 | Step | Field | Input Type |
 |---|---|---|
-| 1. "What brings you to Ritual Studio?" | `user_goal` | Single select (5 options: habit/skills/portfolio/unstuck/return) |
+| 1. "What brings you to Ritual Studio?" | `user_goal` | Multi-select (5 options: habit/skills/portfolio/unstuck/return) — stored as comma-separated string |
 | 2. "How would you describe your current level?" | `difficulty_level` | Single select (3: beginner/intermediate/advanced) |
 | 3. "What do you want to draw more of?" | `subject_preferences[]` | Multi-select chips (7 subjects) |
 | 4. "What would you like to strengthen?" | `skill_focus_preferences[]` | Multi-select chips (9 skills) |
@@ -233,4 +233,6 @@ Note: `--legacy-peer-deps` is needed due to minor peer dependency version mismat
 
 **Phase 5: Complete** — Onboarding flow: Zustand store (`onboardingStore`), constants (`onboarding.ts`), SelectionChip component, 6-step screens (goal multi-select, level, subjects, skills, duration, reminder with platform-aware time picker), completion screen with summary + edit links + Supabase write + haptic feedback. Fixed `database.ts` types for supabase-js v2.98 (`Relationships` key). Installed `@react-native-community/datetimepicker`.
 
-**Next: Phase 6** — Daily prompt generation (Edge Function with personalization algorithm).
+**Phase 6: Complete** — Daily prompt generation + Home screen: Postgres RPC function `generate_daily_prompts` (migration 007) with full personalization algorithm (eligibility filtering, goal-weighted scoring, comfort/growth/wildcard role selection, cooldown logic, fallback cascade). Added `DailyPromptsResponse`/`DailyPromptWithRole` types, `dailyPromptsStore` (Zustand), `useDailyPrompts` hook. Built `StreakBadge`, `PromptCard` (with role badges), `PromptCarousel` (FlatList snap + animated dot indicators). Home screen with loading/error/empty states, streak display, and "Begin Drawing" CTA that selects prompt and navigates to session.
+
+**Next: Phase 8** — Active session (calm timer screen).
