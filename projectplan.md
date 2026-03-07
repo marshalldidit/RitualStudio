@@ -95,10 +95,10 @@ Track progress across sessions by checking off completed items.
 - [ ] Verify: timer runs smoothly, handles background, pause/resume, completion, "I'm Done" → upload
 
 ## Phase 9: Image Upload
-- [ ] Build src/components/upload/ImagePreview.tsx
-- [ ] Build src/components/upload/CaptionInput.tsx
-- [ ] Implement src/lib/imageUpload.ts (pick, compress, upload to Supabase Storage)
-- [ ] Implement app/upload/[promptId].tsx — camera/gallery, preview, caption, submit
+- [x] Build src/components/upload/ImagePreview.tsx
+- [x] Build src/components/upload/CaptionInput.tsx
+- [x] Implement src/lib/imageUpload.ts (pick, compress, upload to Supabase Storage)
+- [x] Implement app/upload/[promptId].tsx — camera/gallery, preview, caption, submit
 - [ ] Verify: image uploads to Supabase Storage, uploads row created
 
 ## Phase 10: Completion + Streak Update
