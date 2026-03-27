@@ -118,16 +118,17 @@ Track progress across sessions by checking off completed items.
 - [ ] Verify: calendar shows correct day states, month navigation works
 
 ## Phase 12: Profile / Settings
-- [ ] Build src/components/profile/ProfileHeader.tsx
-- [ ] Build src/components/profile/SettingsSection.tsx, SettingsRow.tsx
-- [ ] Build src/components/ui/Avatar.tsx, Toggle.tsx
-- [ ] Implement app/(tabs)/profile.tsx
-- [ ] Implement app/settings/edit-preferences.tsx (reuses onboarding components)
-- [ ] Implement app/settings/account.tsx (change password, sign out, delete)
+- [x] Build src/components/profile/ProfileHeader.tsx (initials avatar, email, member-since)
+- [x] Build src/components/profile/SettingsRow.tsx (SettingsSection + SettingsRow)
+- [x] Implement app/(tabs)/profile.tsx (header, preferences summary, account link)
+- [x] Implement app/settings/edit-preferences.tsx (reuses onboarding constants, saves to Supabase)
+- [x] Implement app/settings/account.tsx (change password, sign out, delete account)
+- [x] Upgrade root layout from Slot to Stack for proper back navigation
 - [ ] Verify: preferences editable, sign out works, next prompt set uses new prefs
 
 ## Phase 13: Stripe Placeholder
-- [ ] Create supabase/migrations/006_create_subscriptions.sql
-- [ ] Create src/lib/payments.ts (PaymentService interface)
-- [ ] Create src/types/subscription.ts
+- [x] Create supabase/migrations/008_create_subscriptions.sql (table, RLS, trigger update, backfill)
+- [x] Create src/types/subscription.ts (SubscriptionPlan, SubscriptionStatus)
+- [x] Update src/types/database.ts (subscriptions table + SubscriptionRow)
+- [x] Create src/lib/payments.ts (getSubscription, isPro)
 - [ ] Verify: subscriptions table exists, all users default to "free"

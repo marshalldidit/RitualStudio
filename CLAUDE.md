@@ -17,14 +17,15 @@ A habit-forming mobile app for artists and illustrators who want daily drawing d
 
 ```
 app/                          # Expo Router file-based routes
-  _layout.tsx                 # Root layout: font loading, splash screen, providers
+  _layout.tsx                 # Root layout: Stack navigator, font loading, splash screen, providers
   index.tsx                   # Current: design system demo screen
-  (auth)/                     # Auth group (sign-in, sign-up) — not yet built
-  (onboarding)/               # 6-step onboarding + completion — not yet built
-  (tabs)/                     # 3-tab bar (Home, Calendar, Profile) — not yet built
-  session/[promptId].tsx      # Drawing timer session — not yet built
-  upload/[promptId].tsx       # Image upload — not yet built
-  completion.tsx              # Celebration screen — not yet built
+  (auth)/                     # Auth group (sign-in, sign-up)
+  (onboarding)/               # 6-step onboarding + completion
+  (tabs)/                     # 3-tab bar (Home, Calendar, Profile)
+  session/[promptId].tsx      # Drawing timer session
+  upload/[promptId].tsx       # Image upload
+  completion.tsx              # Celebration screen
+  settings/                   # Settings screens (edit-preferences, account)
 
 src/
   theme/                      # Design tokens (StyleSheet-compatible, NOT NativeWind classes)
@@ -42,18 +43,18 @@ src/
     Input.tsx                 # Text input with focus/error/disabled states, password toggle
     StepProgressBar.tsx       # Animated onboarding step indicator dots
     TabBar.tsx                # Bottom tab bar with active pill highlight
-  components/                 # Feature components (organized by feature: home/, session/, calendar/, completion/, etc.)
+  components/                 # Feature components (organized by feature: home/, session/, calendar/, completion/, profile/, etc.)
   providers/
     AuthProvider.tsx           # Auth context: session, userProfile, signIn/signUp/signOut/resetPassword/refreshProfile
   hooks/
     useProtectedRoute.ts      # Route guard: no session→auth, !onboarding→onboarding, else→tabs
   stores/                     # Zustand stores
-  lib/                        # Utilities (supabase client, image upload, streak manager)
+  lib/                        # Utilities (supabase client, image upload, streak manager, payments)
   types/                      # TypeScript type definitions
   constants/                  # Static data and option definitions
 
 supabase/
-  migrations/                 # 6 SQL migration files (001–006)
+  migrations/                 # 8 SQL migration files (001–008)
   functions/                  # Edge Functions (prompt generation) — not yet created
 ```
 
@@ -106,9 +107,9 @@ When building new RN components, reference these web originals for visual behavi
 | ProgressRing | `ds/MiscComponents.tsx` | SVG circle, `brand-400` stroke on `dark-100` track |
 | Toast | `ds/NavigationComponents.tsx` DSToast | 4 types: success/warning/error/info with semantic colors |
 
-## Database Schema (6 tables)
+## Database Schema (7 tables)
 
-Defined in `02_data_model_mapping.md`. Not yet implemented as SQL migrations.
+Defined in `02_data_model_mapping.md`. Implemented via 8 migrations.
 
 1. **`users`** — extends `auth.users` with onboarding preferences (`user_goal`, `difficulty_level`, `subject_preferences[]`, `skill_focus_preferences[]`, `session_duration_minutes`, `reminder_time_local`, `timezone`, `onboarding_completed`)
 2. **`prompts`** — curated library with `title`, `description`, `difficulty_level`, `time_required_minutes`, `growth_weight`, `subject_tags[]`, `skill_focus_tags[]`
@@ -116,6 +117,7 @@ Defined in `02_data_model_mapping.md`. Not yet implemented as SQL migrations.
 4. **`user_prompt_history`** — per-prompt tracking: `was_offered`, `was_selected`, `was_completed`
 5. **`user_streaks`** — `current_streak_days`, `longest_streak_days`, `last_completed_date_local`, `grace_days_available`
 6. **`uploads`** — links drawings to prompts/dates with `storage_path` and optional `caption`
+7. **`subscriptions`** — `(user_id)` PK, `plan` (free/pro), `status`, Stripe ID placeholders, auto-created on signup
 
 ## Personalization Algorithm
 
@@ -243,4 +245,8 @@ Note: `--legacy-peer-deps` is needed due to minor peer dependency version mismat
 
 **Phase 11: Complete** — Streak calendar: `CalendarDayCell` (6 states: default/today/completed/missed/rest/empty), `MonthNavigator` (prev/next with forward-limit at current month), `MonthCalendar` (7-column grid with weekday headers), `StreakSummaryCard` (current/longest/total stats). `useStreakCalendar` hook fetches `daily_prompt_sets` + `user_streaks`, determines day states (completed from DB, missed = offered but not completed, rest = future). Calendar screen with streak badge, summary card, month grid, and color legend.
 
-**Next: Phase 12** — Profile / Settings.
+**Phase 12: Complete** — Profile & Settings: `ProfileHeader` (initials avatar, email, member-since), `SettingsSection`/`SettingsRow` components. Profile tab with preferences summary and account link. Edit preferences screen (all 6 preferences editable via `SelectionChip` + time picker, saves to Supabase). Account screen (change password, sign out with confirmation, delete account placeholder). Root layout upgraded from `Slot` to `Stack` for proper back navigation.
+
+**Phase 13: Complete** — Stripe placeholder: Migration 008 (`subscriptions` table with free/pro plans, Stripe ID columns, RLS, `handle_new_user` trigger updated, backfill). `SubscriptionPlan`/`SubscriptionStatus` domain types. `SubscriptionRow` added to `database.ts`. `payments.ts` with `getSubscription()` and `isPro()` utilities.
+
+**Next: Phase 14** — Polish, testing, and launch prep.
