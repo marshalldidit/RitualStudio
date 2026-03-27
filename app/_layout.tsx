@@ -1,6 +1,6 @@
 import "../global.css";
 import { useEffect } from "react";
-import { Slot } from "expo-router";
+import { Stack } from "expo-router";
 import { View, ActivityIndicator, StyleSheet } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "@expo-google-fonts/plus-jakarta-sans";
@@ -29,7 +29,17 @@ function RootNavigator() {
     );
   }
 
-  return <Slot />;
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="(auth)" />
+      <Stack.Screen name="(onboarding)" />
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="session" />
+      <Stack.Screen name="upload" />
+      <Stack.Screen name="completion" />
+      <Stack.Screen name="settings" />
+    </Stack>
+  );
 }
 
 const loadingStyles = StyleSheet.create({
