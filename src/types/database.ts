@@ -171,6 +171,39 @@ export type Database = {
         }
         Relationships: []
       }
+      subscriptions: {
+        Row: {
+          user_id: string
+          plan: 'free' | 'pro'
+          status: 'active' | 'canceled' | 'past_due'
+          stripe_customer_id: string | null
+          stripe_subscription_id: string | null
+          current_period_end: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          user_id: string
+          plan?: 'free' | 'pro'
+          status?: 'active' | 'canceled' | 'past_due'
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          current_period_end?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          user_id?: string
+          plan?: 'free' | 'pro'
+          status?: 'active' | 'canceled' | 'past_due'
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          current_period_end?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       uploads: {
         Row: {
           id: string
@@ -224,6 +257,7 @@ export type DailyPromptSetRow = Database['public']['Tables']['daily_prompt_sets'
 export type UserPromptHistoryRow = Database['public']['Tables']['user_prompt_history']['Row']
 export type UserStreakRow = Database['public']['Tables']['user_streaks']['Row']
 export type UploadRow = Database['public']['Tables']['uploads']['Row']
+export type SubscriptionRow = Database['public']['Tables']['subscriptions']['Row']
 
 // Domain types
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced'
