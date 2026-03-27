@@ -102,20 +102,19 @@ Track progress across sessions by checking off completed items.
 - [ ] Verify: image uploads to Supabase Storage, uploads row created
 
 ## Phase 10: Completion + Streak Update
-- [ ] Implement src/lib/streakManager.ts (grace day logic)
-- [ ] Build src/components/completion/CelebrationAnimation.tsx
-- [ ] Build src/components/completion/StreakUpdate.tsx
-- [ ] Implement app/completion.tsx — "Day X Complete" / "You showed up."
+- [x] Implement src/lib/streakManager.ts (completeRitual: RPC streak update + mark prompt set/history completed)
+- [x] Build src/components/completion/CelebrationAnimation.tsx (confetti particles with reanimated)
+- [x] Build src/components/completion/StreakUpdate.tsx (streak badge, grace note, milestone messages, new record badge)
+- [x] Implement app/completion.tsx — loading/error/incomplete/success states, celebration, haptic feedback, "Back to Home"
 - [ ] Verify: streak increments, grace days work, celebration displays
 
 ## Phase 11: Streak Calendar
-- [ ] Build src/components/calendar/MonthCalendar.tsx
-- [ ] Build src/components/calendar/CalendarDayCell.tsx (6 DayPill states)
-- [ ] Build src/components/calendar/StreakSummaryCard.tsx
-- [ ] Build src/components/calendar/MonthNavigator.tsx
-- [ ] Build src/components/ui/StatCard.tsx, DayCell.tsx
-- [ ] Implement src/hooks/useStreakCalendar.ts
-- [ ] Implement app/(tabs)/calendar.tsx
+- [x] Build src/components/calendar/CalendarDayCell.tsx (6 states: default, today, completed, missed, rest, empty)
+- [x] Build src/components/calendar/MonthNavigator.tsx (prev/next arrows, month/year label)
+- [x] Build src/components/calendar/MonthCalendar.tsx (7-column grid with weekday headers)
+- [x] Build src/components/calendar/StreakSummaryCard.tsx (current/longest/total stats)
+- [x] Implement src/hooks/useStreakCalendar.ts (fetch prompt sets + streak stats, day state logic)
+- [x] Implement app/(tabs)/calendar.tsx (header, streak badge, summary card, calendar grid, legend)
 - [ ] Verify: calendar shows correct day states, month navigation works
 
 ## Phase 12: Profile / Settings

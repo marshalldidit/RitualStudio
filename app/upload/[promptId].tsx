@@ -156,17 +156,24 @@ export default function UploadScreen() {
   // ---- Skip upload ----
 
   const handleSkip = useCallback(() => {
-    Alert.alert(
-      "Skip upload?",
-      "You can still complete your ritual without uploading a drawing.",
-      [
-        { text: "Go Back", style: "cancel" },
-        {
-          text: "Skip",
-          onPress: () => router.replace("/completion"),
-        },
-      ]
-    );
+    if (Platform.OS === "web") {
+      const confirmed = window.confirm(
+        "Skip upload?\n\nYou can still complete your ritual without uploading a drawing."
+      );
+      if (confirmed) router.replace("/completion");
+    } else {
+      Alert.alert(
+        "Skip upload?",
+        "You can still complete your ritual without uploading a drawing.",
+        [
+          { text: "Go Back", style: "cancel" },
+          {
+            text: "Skip",
+            onPress: () => router.replace("/completion"),
+          },
+        ]
+      );
+    }
   }, [router]);
 
   return (

@@ -42,7 +42,7 @@ src/
     Input.tsx                 # Text input with focus/error/disabled states, password toggle
     StepProgressBar.tsx       # Animated onboarding step indicator dots
     TabBar.tsx                # Bottom tab bar with active pill highlight
-  components/                 # Feature components (organized by feature: home/, session/, etc.)
+  components/                 # Feature components (organized by feature: home/, session/, calendar/, completion/, etc.)
   providers/
     AuthProvider.tsx           # Auth context: session, userProfile, signIn/signUp/signOut/resetPassword/refreshProfile
   hooks/
@@ -237,4 +237,10 @@ Note: `--legacy-peer-deps` is needed due to minor peer dependency version mismat
 
 **Phase 8: Complete** — Active session (calm timer screen): Timestamp-based session engine (`sessionStore`) with explicit state machine (idle/running/paused/completed_active/ended). Only 15/30/60 min durations accepted. Soft completion model with 80% early-complete threshold (12/24/48 min). Wall-clock timer via `useSessionTimer` hook (background-aware, no auto-pause). Reusable `ProgressRing` (SVG + reanimated). Minutes-only display with step-based ring progress. Pause/resume, overtime display (+M:SS), one-time completion haptic, back-button confirmation dialog with threshold-based complete/incomplete logic.
 
-**Next: Phase 9** — Image upload.
+**Phase 9: Complete** — Image upload: `expo-image-picker` (camera/gallery), `ImagePreview` + `CaptionInput` components, `imageUpload.ts` (pick, compress, upload to Supabase Storage + create upload record with orphan cleanup), upload screen with back-nav blocking during upload, skip option.
+
+**Phase 10: Complete** — Completion + streak update: `streakManager.ts` calls `update_streak_on_completion` RPC + marks prompt set/history completed in parallel, reads before/after streak for UI. `CelebrationAnimation` (24 confetti particles with reanimated, brand colors). `StreakUpdate` (animated streak badge, grace-day note, milestone messages at 7/14/21/30/50/100 days, new record badge). Completion screen with 4 states: loading (spinner), error (retry + skip), incomplete session ("See You Tomorrow"), success (celebration + streak + haptic).
+
+**Phase 11: Complete** — Streak calendar: `CalendarDayCell` (6 states: default/today/completed/missed/rest/empty), `MonthNavigator` (prev/next with forward-limit at current month), `MonthCalendar` (7-column grid with weekday headers), `StreakSummaryCard` (current/longest/total stats). `useStreakCalendar` hook fetches `daily_prompt_sets` + `user_streaks`, determines day states (completed from DB, missed = offered but not completed, rest = future). Calendar screen with streak badge, summary card, month grid, and color legend.
+
+**Next: Phase 12** — Profile / Settings.
