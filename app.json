@@ -39,7 +39,13 @@
           "cameraPermission": "Allow Ritual Studio to access your camera to photograph your drawings."
         }
       ],
-      "@react-native-community/datetimepicker"
+      "@react-native-community/datetimepicker",
+      [
+        "expo-notifications",
+        {
+          "sounds": []
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

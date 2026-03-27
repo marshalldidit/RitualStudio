@@ -28,6 +28,7 @@ import {
   DURATION_OPTIONS,
 } from "@/constants/onboarding";
 import { format, parse } from "date-fns";
+import { scheduleDailyReminder } from "@/lib/notifications";
 
 export default function EditPreferencesScreen() {
   const router = useRouter();
@@ -108,6 +109,7 @@ export default function EditPreferencesScreen() {
     }
 
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    await scheduleDailyReminder(reminderTime);
     await refreshProfile();
     router.back();
   }

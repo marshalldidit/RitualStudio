@@ -9,6 +9,7 @@ import { fontFamily } from "@/theme/typography";
 import { useAuth } from "@/providers/AuthProvider";
 import { supabase } from "@/lib/supabase";
 import { useOnboardingStore } from "@/stores/onboardingStore";
+import { scheduleDailyReminder } from "@/lib/notifications";
 import {
   GOAL_OPTIONS,
   LEVEL_OPTIONS,
@@ -110,6 +111,7 @@ export default function CompleteScreen() {
     }
 
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    await scheduleDailyReminder(store.reminderTimeLocal);
     await refreshProfile();
     store.reset();
     // useProtectedRoute will auto-redirect to /(tabs)

@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState, useCallback } fr
 import { Session } from '@supabase/supabase-js';
 import { supabase } from '@/lib/supabase';
 import { UserRow } from '@/types/database';
+import { cancelAllReminders } from '@/lib/notifications';
 
 type AuthContextValue = {
   session: Session | null;
@@ -139,6 +140,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   );
 
   const signOut = useCallback(async () => {
+    await cancelAllReminders();
     const { error } = await supabase.auth.signOut();
     if (error) {
       console.error('[AuthProvider] Sign-out error:', error.message);

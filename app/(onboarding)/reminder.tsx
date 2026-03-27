@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { colors, spacing } from "@/theme";
 import { fontFamily } from "@/theme/typography";
 import { useOnboardingStore } from "@/stores/onboardingStore";
+import { requestPermission } from "@/lib/notifications";
 
 function timeStringToDate(timeStr: string): Date {
   return parse(timeStr, "HH:mm", new Date());
@@ -165,7 +166,10 @@ export default function ReminderScreen() {
           variant="cta"
           size="lg"
           style={styles.button}
-          onPress={() => router.push("/(onboarding)/complete")}
+          onPress={async () => {
+            await requestPermission();
+            router.push("/(onboarding)/complete");
+          }}
         />
       </View>
     </View>
